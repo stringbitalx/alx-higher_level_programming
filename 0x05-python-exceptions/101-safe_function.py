@@ -6,4 +6,4 @@ def safe_function(fct, *args):
         return fct(*args)
     except (ZeroDivisionError, IndexError, TypeError, ValueError) as e:
         stderr.write("Exception: {}\n".format(e))
-        return None
+    return None
