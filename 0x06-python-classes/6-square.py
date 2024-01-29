@@ -1,0 +1,48 @@
+#!/usr/bin/python3
+"""defines a square based on 5-square.py"""
+
+
+
+class Square:
+    """Square"""
+
+    def __init__(self, size=0, position=(0, 0)):
+        """initializes the data"""
+
+        self.size = size
+        self.position = position
+
+    def __str__(self):
+        self.my_print()
+
+
+
+    @property
+    def size(self):
+        """retrieve self"""
+
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >=0")
+        self.__size = value
+
+    @property
+    def position(self):
+        """get the position of the square"""
+
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """set the square position"""
+
+        if not isinstance(value, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if len(value) != 2:
+            raise TypeError("position must be a tuple of 2 integerss")
+        if len([i for i in value])
