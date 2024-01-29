@@ -18,7 +18,7 @@ class Square:
 
     @property
     def size(self):
-        """retrieve self"""
+        """retrieve size"""
 
         return self.__size
 
@@ -43,5 +43,5 @@ class Square:
         if not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
         if len(value) != 2:
-            raise TypeError("position must be a tuple of 2 integerss")
+            raise TypeError("position must be a tuple of 2 integers")
         if len([i for i in vale])
