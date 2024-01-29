@@ -20,7 +20,7 @@ class Rectangle:
         """set width attribute"""
 
         if not isinstance(value, int):
-            raise TypeError("widht must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("Width must be >= 0")
 
@@ -40,7 +40,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
 
         if value < 0:
-            raise ValueError("height must be >=0")
+            raise ValueError("height must be >= 0")
 
         self.__height = value
 
@@ -66,9 +66,8 @@ class Rectangle:
         list = []
 
         for i in range(self.__height):
-            for j in range (self.__width):
+            for j in range(self.__width):
                 list.append("#")
-            if i != self._height - 1:
+            if i != self.__height - 1:
                 list.append("\n")
-
         return ("".join(list))
