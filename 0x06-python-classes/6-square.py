@@ -2,7 +2,6 @@
 """defines a square based on 5-square.py"""
 
 
-
 class Square:
     """Square"""
 
@@ -45,4 +44,4 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         if len(value) != 2:
             raise TypeError("position must be a tuple of 2 integerss")
-        if len([i for i in value])
+        if len([i for i in vale])
