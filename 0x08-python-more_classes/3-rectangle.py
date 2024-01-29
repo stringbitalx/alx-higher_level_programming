@@ -1,20 +1,74 @@
 #!/usr/bin/python3
-"""defines a squaere base on 2-square.py"""
+"""defines a rectangle"""
 
 
-class Square:
-    """square"""
+class Rectangle:
+    """a class rectangle that defines a rectangle"""
+    def __init__(self, width=0, height=0):
+        """initialize the width and height of a rectangle"""
 
-    def __init__(self, size=0):
-        """init the data"""
+        self.width = width
+        self.height = height
 
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >=0")
-        self.__size = size
+    @property
+    def width(self):
+        """self width attribute"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """set width attribute"""
+
+        if not isinstance(value, int):
+            raise TypeError("widht must be an integer")
+        if value < 0:
+            raise ValueError("Width must be >= 0")
+
+        self.__width = value
+
+    @property
+    def height(self):
+        """set height attribute"""
+
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """set new height attribute"""
+
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+
+        if value < 0:
+            raise ValueError("height must be >=0")
+
+        self.__height = value
 
     def area(self):
-        """return the current square area"""
+        """returns the area of the rectangle"""
 
-        return (self.__size * self.__size)
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """returns perimeter of a rectangle"""
+
+        if self.__height == 0 or self.__width == 0:
+            return 0
+
+        return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """returns string representation of rectangle"""
+
+        if self.__width == 0 or self.__height == 0:
+            return ""
+
+        list = []
+
+        for i in range(self.__height):
+            for j in range (self.__width):
+                list.append("#")
+            if i != self._height - 1:
+                list.append("\n")
+
+        return ("".join(list))
