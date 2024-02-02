@@ -15,6 +15,6 @@ def tex_identation(text):
         s = ""
         for i in list_text:
             i = i.strip(" ")
-            s = i + d if s is ""else s + "\n\n" + i + d
+            s = i + d if s is "" else s + "\n\n" + i + d
 
-    print(s[:-3], end ="")
+    print(s[:-3], end="")
